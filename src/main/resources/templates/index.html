@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="/js/jquery-easyui-1.8.6/jquery.min.js"></script>
+<body>
+<div id="myDiv"><h2>是否启动</h2></div>
+<button id="test" type="button">启动test</button>
+<button id="sendTopicMessage1" type="button">启动sendTopicMessage1</button>
+<button id="sendTopicMessage2" type="button">启动sendTopicMessage2</button>
+<button id="sendFanoutMessage" type="button">启动sendFanoutMessage</button>
+<button id="TestMessageAck" type="button">启动TestMessageAck</button>
+<button id="TestMessageAck2" type="button">启动TestMessageAck2</button>
+</body>
+
+<script>
+    $("#test").click(function () {
+        htmlobj = $.ajax({url: "/test", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+
+    $("#sendTopicMessage1").click(function () {
+        htmlobj = $.ajax({url: "/sendTopicMessage1", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+    $("#sendTopicMessage2").click(function () {
+        htmlobj = $.ajax({url: "/sendTopicMessage2", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+    $("#sendFanoutMessage").click(function () {
+        htmlobj = $.ajax({url: "/sendFanoutMessage", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+    $("#TestMessageAck").click(function () {
+        htmlobj = $.ajax({url: "/TestMessageAck", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+    $("#TestMessageAck2").click(function () {
+        htmlobj = $.ajax({url: "/TestMessageAck2", async: true});
+        console.log(htmlobj);
+        // alert('服务启动，可以关闭此页');
+    });
+</script>
+</html>
